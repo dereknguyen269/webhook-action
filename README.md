@@ -10,17 +10,6 @@ Supports all [workflow event types](https://developer.github.com/webhooks/#event
 <hr/>
 
 ## Usage
-
-Sending a string:
-
-```yml
-- name: Webhook
-  uses: dereknguyen269/webhook-action@master
-  env:
-    WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-    WEBHOOK_DATA: "Hello from github actions!"
-```
-
 Sending a body of data:
 
 ```yml
@@ -32,13 +21,14 @@ Sending a body of data:
 ```
 
 ### Arguments
-
-* ```yml 
-  WEBHOOK_DATA: "Hello from github actions!"
-  ```
-
 * ```yml
   WEBHOOK_DATA: '{"app": "HelloWorld", "version": "1.1.1"}'
+  ```
+  
+### You can use like ENV:
+
+* ```yml
+  WEBHOOK_DATA: ${{ secrets.WEBHOOK_DATA }}
   ```
 
 ### Environment
