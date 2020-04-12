@@ -36,6 +36,7 @@ Sending a body of data:
 The action is expecting a single environment variable of your data. This can be pre-encoded json string, or just a message. Format it to how your API is expecting.
 
 * **`WEBHOOK_URL`** (**required**): This is the webhook url to send the payload to.
+* **`WEBHOOK_DATA`** (**required**)
 
 ## Issues
 
